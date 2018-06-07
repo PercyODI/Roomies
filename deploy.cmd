@@ -105,14 +105,14 @@ echo Handling ASP.NET Core Web Application deployment.
 :: 0.1. Build Angular Application
 call :SelectNodeVersion
 
-IF EXIST "%DEPLOYMENT_SOURCE%\package.json" (
-  pushd "%DEPLOYMENT_SOURCE%"
+IF EXIST "%DEPLOYMENT_SOURCE%/roomies-ng/package.json" (
+  pushd "%DEPLOYMENT_SOURCE%/roomies-ng"
   call :ExecuteCmd !NPM_CMD! install --production
   IF !ERRORLEVEL! NEQ 0 goto error
   popd
 )
 
-IF EXIST "%DEPLOYMENT_SOURCE%/.angular-cli.json" (
+IF EXIST "%DEPLOYMENT_SOURCE%/roomies-ng/.angular-cli.json" (
 echo Building App in %DEPLOYMENT_SOURCE%/roomies-ng…
 pushd "%DEPLOYMENT_SOURCE%/roomies-ng"
 call :ExecuteCmd !NPM_CMD! run build
