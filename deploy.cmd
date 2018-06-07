@@ -112,7 +112,7 @@ IF EXIST "%DEPLOYMENT_SOURCE%/roomies-ng/package.json" (
   popd
 )
 
-IF EXIST "%DEPLOYMENT_SOURCE%/roomies-ng/.angular-cli.json" (
+IF EXIST "%DEPLOYMENT_SOURCE%/roomies-ng/angular.json" (
 echo Building App in %DEPLOYMENT_SOURCE%/roomies-ng…
 pushd "%DEPLOYMENT_SOURCE%/roomies-ng"
 call :ExecuteCmd !NPM_CMD! run build
