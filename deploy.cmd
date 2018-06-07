@@ -61,6 +61,8 @@ IF DEFINED MSBUILD_PATH goto MsbuildPathDefined
 SET MSBUILD_PATH=%ProgramFiles(x86)%\MSBuild\14.0\Bin\MSBuild.exe
 :MsbuildPathDefined
 
+goto Deployment
+
 :: Utility Functions
 :: -----------------
 
@@ -97,6 +99,7 @@ goto :EOF
 :: Deployment
 :: ----------
 
+:Deployment
 echo Handling ASP.NET Core Web Application deployment.
 
 :: 0.1. Build Angular Application
