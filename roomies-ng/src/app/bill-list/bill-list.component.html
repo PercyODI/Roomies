@@ -1,0 +1,8 @@
+<p>
+  <div *ngIf="bills && bills.length > 0">
+    <app-bill *ngFor="let bill of bills" [bill]="bill"></app-bill>
+  </div>
+  <div *ngIf="bills && bills.length === 0">
+    No Bills! Lucky!
+  </div>
+<!-- </p> -->
